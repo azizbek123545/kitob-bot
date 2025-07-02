@@ -2,7 +2,8 @@
   "build": {
     "builder": "DOCKERFILE",
     "dockerfilePath": "Dockerfile"
+  },
+  "deploy": {
+    "restartPolicyType": "ALWAYS"
   }
-
-
 }
