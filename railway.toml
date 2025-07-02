@@ -1,0 +1,21 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 300
+restartPolicyType = "on-failure"
+restartPolicyMaxRetries = 10
+
+[environments.production]
+BOT_TOKEN = "$BOT_TOKEN"
+ADMIN_IDS = "$ADMIN_IDS"
+CHANNEL1_ID = "$CHANNEL1_ID"
+CHANNEL2_ID = "$CHANNEL2_ID"
+CHANNEL3_ID = "$CHANNEL3_ID"
+CHANNEL4_ID = "$CHANNEL4_ID"
+DATABASE_PATH = "data/bot_database.db"
+BOOKS_DIR = "data/books"
+LOG_LEVEL = "INFO"
+LOG_FILE = "logs/bot.log"
